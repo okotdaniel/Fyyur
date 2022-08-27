@@ -1,0 +1,108 @@
+2022-08-03 11:26:26,258 INFO: errors [in D:\projects\development\Fyyur\app.py:497]
+2022-08-03 11:26:53,816 ERROR: Exception on / [GET] [in D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py:1679]
+Traceback (most recent call last):
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1760, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1758, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1734, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\projects\development\Fyyur\app.py", line 83, in index
+    return render_template('pages/home.html')
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: pages/home.html
+2022-08-03 11:26:54,084 ERROR: Exception on /favicon.ico [GET] [in D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py:1679]
+Traceback (most recent call last):
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1758, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1723, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1705, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\werkzeug\routing\map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 2463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1760, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1604, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\app.py", line 1544, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "D:\projects\development\Fyyur\app.py", line 482, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\projects\development\Fyyur\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
+2022-08-03 11:27:46,880 INFO: errors [in D:\projects\development\Fyyur\app.py:497]
+2022-08-03 11:29:17,972 INFO: errors [in D:\projects\development\Fyyur\app.py:497]
+2022-08-03 12:11:21,161 INFO: errors [in D:\projects\development\Fyyur\app.py:496]
+2022-08-03 12:12:18,902 INFO: errors [in D:\projects\development\Fyyur\app.py:496]
+2022-08-27 13:15:40,932 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:15:49,695 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:16:08,474 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:16:32,746 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:16:45,864 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:16:51,617 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:22:06,271 INFO: errors [in D:\projects\development\Fyyur\app.py:363]
+2022-08-27 13:25:32,848 INFO: errors [in D:\projects\development\Fyyur\app.py:360]
+2022-08-27 13:32:22,326 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:32:48,717 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:33:06,465 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:33:29,927 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:33:44,820 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:34:00,122 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:34:08,491 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:34:19,947 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:34:30,881 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:35:50,153 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:37:40,204 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:37:52,248 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:38:20,430 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:38:23,359 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:40:39,945 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:40:42,016 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:41:30,049 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:41:34,755 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:41:43,912 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:42:24,129 INFO: errors [in D:\projects\development\Fyyur\app.py:455]
+2022-08-27 13:45:00,418 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:45:04,474 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:45:09,028 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:45:20,015 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:45:31,728 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
+2022-08-27 13:45:39,806 INFO: errors [in D:\projects\development\Fyyur\app.py:361]
