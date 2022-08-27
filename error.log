@@ -117,3 +117,6 @@ jinja2.exceptions.TemplateNotFound: errors/404.html
 2022-08-27 16:55:31,195 INFO: errors [in D:\projects\development\Fyyur\app.py:474]
 2022-08-27 16:55:37,348 INFO: errors [in D:\projects\development\Fyyur\app.py:474]
 2022-08-27 16:56:31,582 INFO: errors [in D:\projects\development\Fyyur\app.py:474]
+2022-08-27 22:51:09,340 INFO: errors [in D:\projects\development\Fyyur\app.py:670]
+2022-08-27 22:51:19,160 INFO: errors [in D:\projects\development\Fyyur\app.py:670]
+2022-08-27 22:51:39,993 INFO: errors [in D:\projects\development\Fyyur\app.py:670]

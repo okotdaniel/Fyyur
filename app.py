@@ -12,7 +12,6 @@ from flask_migrate import Migrate
 import logging
 from logging import Formatter, FileHandler
 from flask_wtf import Form
-from .forms import *
 import enum
 import sys
 
@@ -26,12 +25,15 @@ from flask import (
     url_for
 )
 
+from .forms import *
+
+from .models import db, Venue, Artist, Shows
+
+
 
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
-
-from models import db, Venue, Artist, Shows
 
 
 app = Flask(__name__)
