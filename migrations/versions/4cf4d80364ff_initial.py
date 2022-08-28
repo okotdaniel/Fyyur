@@ -1,8 +1,8 @@
-"""Initial migration.
+"""initial
 
-Revision ID: 7dd94915c857
+Revision ID: 4cf4d80364ff
 Revises: 
-Create Date: 2022-08-27 22:51:19.211040
+Create Date: 2022-08-28 10:53:50.649321
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '7dd94915c857'
+revision = '4cf4d80364ff'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -24,7 +24,7 @@ def upgrade():
     sa.Column('city', sa.String(length=120), nullable=True),
     sa.Column('state', sa.String(length=120), nullable=True),
     sa.Column('phone', sa.String(length=120), nullable=True),
-    sa.Column('genres', sa.ARRAY(sa.String(length=120)), nullable=True),
+    sa.Column('genres', sa.PickleType(), nullable=True),
     sa.Column('image_link', sa.String(length=500), nullable=True),
     sa.Column('website_link', sa.String(length=500), nullable=True),
     sa.Column('facebook_link', sa.String(length=120), nullable=True),
@@ -39,7 +39,7 @@ def upgrade():
     sa.Column('city', sa.String(length=120), nullable=True),
     sa.Column('state', sa.String(length=120), nullable=True),
     sa.Column('address', sa.String(length=120), nullable=True),
-    sa.Column('genres', sa.ARRAY(sa.String(length=120)), nullable=True),
+    sa.Column('genres', sa.PickleType(), nullable=True),
     sa.Column('phone', sa.String(length=120), nullable=True),
     sa.Column('image_link', sa.String(length=500), nullable=True),
     sa.Column('website_link', sa.String(length=500), nullable=True),

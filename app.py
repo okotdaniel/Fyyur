@@ -504,17 +504,10 @@ def edit_venue_submission(venue_id):
     venue = Venue.query.get(venue_id)
     venue.name = form.name.data
     venue.genres = request.form.getlist('genres')
-    print(request.form.getlist('genres'))
     venue.address = form.address.data
     venue.city = form.city.data
     venue.state = form.state.data
-    #venue.phone = VenueForm(phone=form.phone.data)
-    #venue.website_link = VenueForm(website_link=form.website_link.data)
-    #venue.facebook_link = VenueForm(facebook_link=form.facebook_link.data)
     venue.seeking_talent = form.seeking_talent.data
-    #venue.seeking_description = VenueForm(seeking_description=form.seeking_description.data)
-    #venue.image_link = VenueForm(state=form.image_link.data)
-
     db.session.add(venue)
     db.session.commit()
 
@@ -555,9 +548,7 @@ def create_artist_submission():
     website_link=request.form['website_link']
     seeking_venue= request.form.get('seeking_value') != None
     seeking_description=request.form['seeking_description']
-    artist = Artist(name=name,city=city,state=state,phone=phone,genres=genres, facebook_link=facebook_link,\
-                      image_link=image_link, website_link=website_link,seeking_venue=seeking_venue, \
-                      seeking_description=seeking_description)
+    artist = Artist(name=name,city=city,state=state,phone=phone,genres=genres, facebook_link=facebook_link, image_link=image_link, website_link=website_link,seeking_venue=seeking_venue, seeking_description=seeking_description)
     db.session.add(artist)
     db.session.commit()
     # modify data to be the data object returned from db insertion
@@ -584,6 +575,7 @@ def create_artist_submission():
 
 @app.route('/shows')
 def shows():
+
   # displays list of shows at /shows
   isEmpty = False
   data = []
@@ -609,7 +601,7 @@ def shows():
     if isEmpty == False:
       return render_template('pages/shows.html', shows=data)
     elif isEmpty == True:
-      return redirect(url_for('forms/new_show.html', form=form))
+      return render_template('pages/shows.html', form=form)
 
 @app.route('/shows/create')
 def create_shows():

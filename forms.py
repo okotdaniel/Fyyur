@@ -133,6 +133,8 @@ class VenueForm(Form):
     )
 
 class ArtistForm(Form):
+
+
     name = StringField(
         'name', validators=[DataRequired()]
     )
@@ -238,3 +240,9 @@ class ArtistForm(Form):
     seeking_description = StringField(
         'seeking_description'
     )
+    website_link = StringField(
+        'website_link'
+     )
+
+
+
